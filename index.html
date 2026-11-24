@@ -490,7 +490,7 @@ function riskFor(gain){return gain<=3?1:(gain<=6?2:(gain<=9?3:4));}
 function face(card){
   if(card.custom)return customFace(card);
   var s=Math.floor(card.idx/49),j=card.idx%49,col=j%7,row=Math.floor(j/7);
-  return '<span class="face" role="img" aria-label="'+esc(label(card))+'" style="background-image:url(sheets/s'+s+'.png);background-position:'+(col*100/6).toFixed(3)+'% '+(row*100/6).toFixed(3)+'%"></span>';
+  return '<span class="face" role="img" aria-label="'+esc(label(card))+'" style="background-image:url(sheets/s'+s+'.webp);background-position:'+(col*100/6).toFixed(3)+'% '+(row*100/6).toFixed(3)+'%"></span>';
 }
 function customFace(card,preview){
   var bg=MODS[card.c||0].bg,pips='';
